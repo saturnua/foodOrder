@@ -5,6 +5,8 @@
  * See lib/config/default.js in the agent distribution for a more complete
  * description of configuration variables and their potential values.
  */
+
+const { RELIC_LICENCE_KEY } = process.env
 exports.config = {
   /**
    * Array of application names.
@@ -13,7 +15,8 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: 'eu01xx5633d347d2f05ec982945616ec2680NRAL',
+  license_key: RELIC_LICENCE_KEY,
+
   /**
    * This setting controls distributed tracing.
    * Distributed tracing lets you see the path that a request takes through your
